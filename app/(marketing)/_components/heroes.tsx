@@ -6,7 +6,7 @@ export const Heroes = () =>{
       <div className="flex items-center">
         <div className="relative w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] md:w-[400px] md:h-[400px]">
           <Image
-            src="/documents.png"
+            src="/web-development.png"
             fill
             className="object-contain"
             alt="Documents"
@@ -14,7 +14,7 @@ export const Heroes = () =>{
         </div>
         <div className="relative h-[400px] w-[400px] hidden md:block">
           <Image
-            src="/reading.png"
+            src="/progress.png"
             fill
             className="object-contain"
             alt="Reading"

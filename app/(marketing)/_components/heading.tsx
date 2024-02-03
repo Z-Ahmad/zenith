@@ -11,8 +11,8 @@ export const Heading = () =>{
        {" "}<span className="underline">Zenith</span>
       </h1>
       <h3 className="text-base sm:text-xl nd:text-2xl font-medium">
-        Zenith is the connected workspace where <br/>
-        better, faster work happens.
+        Zenith is your essential tool to maximize productivity <br/>
+        and effortlessly achieve your goals.
       </h3>
       <Button>
         Enter Zentith
