@@ -20,10 +20,13 @@ import { UserItem } from "./user-item";
 import { Item } from "./item";
 import { DocumentList } from "./document-list";
 import { TrashBox } from "./trash-box";
+
 import { useSearch } from "@/hooks/use-search";
+import { useSettings } from "@/hooks/use-settings";
 
 export const Navigation = () => {
   const search = useSearch()
+  const settings = useSettings()
   const pathname = usePathname();
   const isMobile = useMediaQuery("(max-width: 768px)");
   const create = useMutation(api.documents.create)
@@ -150,7 +153,7 @@ export const Navigation = () => {
           <Item 
             label="Settings" 
             icon={Settings} 
-            onClick={() => {}} 
+            onClick={settings.onOpen} 
           />
           <Item onClick={handleCreate} label="New page" icon={PlusCircle} />
         </div>
