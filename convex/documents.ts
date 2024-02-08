@@ -207,10 +207,11 @@ export const remove = mutation({
     const existingDocument = await ctx.db.get(args.id);
 
     if (!existingDocument) {
-      throw new Error("Not found!")
+      throw new Error("Not found!");
+      console.log("Here")
     }
 
-    if(existingDocument.userId !== userId) {
+    if (existingDocument.userId !== userId) {
       throw new Error("Unauthorized");
     }
 
@@ -218,7 +219,7 @@ export const remove = mutation({
 
     return document;
   }
-})
+});
 
 export const getSearch = query({
   handler: async (ctx) => {
