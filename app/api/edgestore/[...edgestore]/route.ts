@@ -6,6 +6,9 @@ const es = initEdgeStore.create();
  */
 const edgeStoreRouter = es.router({
   publicFiles: es.fileBucket()
+    .beforeDelete(() => {
+      return true; // allow delete
+  })
 });
 const handler = createEdgeStoreNextHandler({
   router: edgeStoreRouter
